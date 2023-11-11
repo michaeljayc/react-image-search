@@ -16,15 +16,15 @@ const Gallery = () => {
 
   if (response.isLoading) {
     return (
-      <section className="image-container">
-        <h4>Loading...</h4>
+      <section className="default-container">
+        <div className="loading"></div>;
       </section>
     );
   }
 
   if (response.isError) {
     return (
-      <section className="image-container">
+      <section className="default-container">
         <h4>An error occured...</h4>
       </section>
     );
@@ -32,9 +32,11 @@ const Gallery = () => {
 
   const results = response.data.results;
   if (results.length < 1) {
-    <section className="image-container">
-      <h4>No results found...</h4>
-    </section>;
+    return (
+      <section className="default-container">
+        <h4>No results found</h4>
+      </section>
+    );
   }
 
   return (
