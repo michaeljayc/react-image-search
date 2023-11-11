@@ -11,12 +11,12 @@ const SearchForm = () => {
 
   return (
     <section>
-      <h4 className="title">React Image Search</h4>
+      <h4 className="title">Image Search</h4>
       <form className="search-form" onSubmit={handleSubmit}>
         <input
           type="text"
           name="keyword"
-          className="form-input search"
+          className="form-input search-input"
           placeholder="Search..."
         />
         <button type="submit" className="btn">
